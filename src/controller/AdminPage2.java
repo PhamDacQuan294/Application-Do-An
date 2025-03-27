@@ -270,6 +270,20 @@ public class AdminPage2 extends javax.swing.JFrame {
                 "Mã món ăn", "Tên món ăn", "Giá tiền", "Hình ảnh", "Trạng thái"
             }
         ));
+        jTable1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jTable1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jButton15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -826,6 +840,36 @@ public class AdminPage2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "⚠ Đã xảy ra lỗi trong quá trình cập nhật!", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jTable1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable1AncestorAdded
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        int selectedRow = jTable1.getSelectedRow();
+        if (selectedRow != -1) { // Kiểm tra xem có hàng nào được chọn không
+            String idMon = jTable1.getValueAt(selectedRow, 0).toString();
+            String tenMon = jTable1.getValueAt(selectedRow, 1).toString();
+            String gia = jTable1.getValueAt(selectedRow, 2).toString();
+            String hinhAnh = jTable1.getValueAt(selectedRow, 3).toString();
+            String trangThai = jTable1.getValueAt(selectedRow, 4).toString();
+
+            // ✅ Hiển thị dữ liệu lên form
+            jTextField1.setText(idMon);
+            jTextField2.setText(tenMon);
+            jTextField3.setText(gia);
+            // ✅ Hiển thị trạng thái từ Radio Button Group
+            if (trangThai.equalsIgnoreCase("Còn hàng")) {
+                jRadioButton1.setSelected(true);
+            } else if (trangThai.equalsIgnoreCase("Hết hàng")) {
+                jRadioButton2.setSelected(true);
+            }
+
+            // ✅ Hiển thị ảnh trong jPanel9
+            updateImagePanel(hinhAnh);
+            jTabbedPane1.setSelectedIndex(0);
+        }
+    }//GEN-LAST:event_jTable1MouseClicked
 
     private void updateImagePanel(String imagePath) {
         ImageIcon icon = new ImageIcon(imagePath);
