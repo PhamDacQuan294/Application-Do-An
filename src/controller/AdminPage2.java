@@ -779,26 +779,22 @@ public class AdminPage2 extends javax.swing.JFrame {
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         try {
-            // 🟢 Kiểm tra xem người dùng có nhập ID món ăn không
-            String foodId = jTextField6.getText().trim(); // jTextField4 là ô nhập ID món ăn
+            String foodId = jTextField6.getText().trim(); 
             if (foodId.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Vui lòng nhập ID món ăn để sửa!", "Cảnh báo", JOptionPane.WARNING_MESSAGE);
                 return;
             }
 
-            // 🟢 Lấy dữ liệu mới từ JTextField
             String newMonAn = jTextField5.getText().trim();
             String giaTienText = jTextField7.getText().trim();
 
-            // Kiểm tra xem tên món ăn và giá tiền có bị trống không
             if (newMonAn.isEmpty() || giaTienText.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin món ăn!", "Cảnh báo", JOptionPane.WARNING_MESSAGE);
                 return;
             }
 
-            double newGiaTien = Double.parseDouble(giaTienText); // Chuyển đổi sang số
+            double newGiaTien = Double.parseDouble(giaTienText); 
 
-            // 🟢 Lấy trạng thái mới từ Radio Button Group
             String newTrangThai = "";
             for (Enumeration<AbstractButton> buttons = buttonGroup1.getElements(); buttons.hasMoreElements();) {
                 AbstractButton button = buttons.nextElement();
@@ -808,21 +804,18 @@ public class AdminPage2 extends javax.swing.JFrame {
                 }
             }
 
-            // 🟢 Tạo đối tượng Food với dữ liệu mới
-            Food updatedFood = new Food(foodId, newMonAn, newGiaTien, imagePath, newTrangThai);
+            Food updatedFood = new Food(foodId, newMonAn, newGiaTien, imagePath2, newTrangThai);
 
-            // 🟢 Cập nhật trong database
             FoodDAO foodDAO = new FoodDAO();
             boolean updateSuccess = foodDAO.updateFood(updatedFood);
 
             if (updateSuccess) {
-                // 🟢 Tìm và cập nhật dữ liệu trong JTable
                 DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
                 for (int i = 0; i < model.getRowCount(); i++) {
                     if (model.getValueAt(i, 0).toString().equals(foodId)) { // Tìm đúng ID món ăn
                         model.setValueAt(newMonAn, i, 1);
                         model.setValueAt(newGiaTien, i, 2);
-                        model.setValueAt(imagePath, i, 3);
+                        model.setValueAt(imagePath2, i, 3);
                         model.setValueAt(newTrangThai, i, 4);
                         break;
                     }
