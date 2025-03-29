@@ -3,45 +3,43 @@ package model;
 import java.time.LocalDate;
 
 public class Employee {
-    private String maNhanVien;
+    private String employeeId;
     private String password;
-    private String vaiTro;
-    private String tenNhanVien;
-    private LocalDate ngaySinh; 
-    private String soDienThoai;
+    private String role;
+    private String fullName;
+    private LocalDate birthDate; 
+    private String phoneNumber;
 
-    public Employee(String maNhanVien, String password, String vaiTro, String tenNhanVien, LocalDate ngaySinh, String soDienThoai) {
-        this.maNhanVien = maNhanVien;
+    public Employee(String employeeId, String password, String role, String fullName, LocalDate birthDate, String phoneNumber) {
+        this.employeeId = employeeId;
         this.password = password;
-        this.vaiTro = vaiTro;
-        this.tenNhanVien = tenNhanVien;
-        this.ngaySinh = ngaySinh;
-        this.soDienThoai = soDienThoai;
+        this.role = role;
+        this.fullName = fullName;
+        this.birthDate = birthDate;
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getMaNhanVien() {
-        return maNhanVien;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String getVaiTro() {
-        return vaiTro;
+    public String getRole() {
+        return role;
     }
 
-    public String getTenNhanVien() {
-        return tenNhanVien;
+    public String getFullName() {
+        return fullName;
     }
 
-    public LocalDate getNgaySinh() {
-        return ngaySinh;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public String getSoDienThoai() {
-        return soDienThoai;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
-    
-    
 }
