@@ -4,10 +4,7 @@
  */
 package dao;
 
-/**
- *
- * @author FPT
- */
+
 public class UserDAO {
     
 }

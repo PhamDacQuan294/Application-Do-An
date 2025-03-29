@@ -2,6 +2,7 @@ package controller;
 
 import dao.FoodDAO;
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.io.File;
 import java.util.Enumeration;
 import java.util.List;
@@ -258,6 +259,11 @@ public class AdminPage2 extends javax.swing.JFrame {
         jButton14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton14.setIcon(new javax.swing.ImageIcon("C:\\Application-Do-An\\src\\images\\search.png")); // NOI18N
         jButton14.setText("Tìm kiếm");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -289,6 +295,11 @@ public class AdminPage2 extends javax.swing.JFrame {
         jButton15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton15.setIcon(new javax.swing.ImageIcon("C:\\Application-Do-An\\src\\images\\delete.png")); // NOI18N
         jButton15.setText("Xoá món");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -863,6 +874,67 @@ public class AdminPage2 extends javax.swing.JFrame {
             jTabbedPane1.setSelectedIndex(0);
         }
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        String searchId = jTextField4.getText().trim(); // Lấy ID từ ô nhập
+
+        if (searchId.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập ID món ăn!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        boolean found = false;
+
+        for (int i = 0; i < model.getRowCount(); i++) {
+            String idMon = model.getValueAt(i, 0).toString(); // Lấy ID từ JTable
+
+            if (idMon.equals(searchId)) { // So sánh ID
+                jTable1.setRowSelectionInterval(i, i); // Chọn dòng tìm thấy
+                jTable1.scrollRectToVisible(new Rectangle(jTable1.getCellRect(i, 0, true))); // Cuộn đến dòng
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy món ăn!", "Thông báo", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // Hiển thị hộp thoại nhập ID món ăn cần xóa
+        String foodId = JOptionPane.showInputDialog(this, "Nhập ID món ăn cần xóa:");
+
+        // Kiểm tra nếu người dùng bấm "Hủy" hoặc để trống
+        if (foodId == null || foodId.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Bạn chưa nhập ID món ăn!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        // Xác nhận trước khi xóa
+        int confirm = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa món ăn có ID: " + foodId + "?",
+                "Xác nhận xóa", JOptionPane.YES_NO_OPTION);
+        if (confirm == JOptionPane.YES_OPTION) {
+            // Gọi DAO để xóa trong database
+            FoodDAO foodDAO = new FoodDAO();
+            boolean deleted = foodDAO.deleteFood(foodId);
+
+            if (deleted) {
+                // Xóa dòng khỏi JTable nếu tìm thấy ID
+                DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+                for (int i = 0; i < model.getRowCount(); i++) {
+                    if (model.getValueAt(i, 0).toString().equals(foodId)) {
+                        model.removeRow(i); // Xóa dòng khỏi bảng
+                        break;
+                    }
+                }
+                JOptionPane.showMessageDialog(this, "Xóa món ăn thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Không tìm thấy món ăn hoặc xóa thất bại!", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
 
     private void updateImagePanel(String imagePath) {
         ImageIcon icon = new ImageIcon(imagePath);
