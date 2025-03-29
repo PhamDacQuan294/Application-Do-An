@@ -1683,7 +1683,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Th&#xea;m nh&#xe2;n vi&#xea;n"/>
+        <Property name="text" type="java.lang.String" value="Th&#xea;m/s&#x1eed;a nh&#xe2;n vi&#xea;n"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>

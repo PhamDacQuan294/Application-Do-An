@@ -1125,7 +1125,7 @@ public class AdminPage2 extends javax.swing.JFrame {
         jButton5.setText("Báo cáo thống kê");
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton6.setText("Thêm nhân viên");
+        jButton6.setText("Thêm/sửa nhân viên");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
