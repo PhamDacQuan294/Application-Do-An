@@ -40,5 +40,26 @@ public class Food {
     public String getTrangThai() {
         return trangThai;
     }
+
+    public void setMaMonAn(String maMonAn) {
+        this.maMonAn = maMonAn;
+    }
+
+    public void setTenMonAn(String tenMonAn) {
+        this.tenMonAn = tenMonAn;
+    }
+
+    public void setGiaTien(double giaTien) {
+        this.giaTien = giaTien;
+    }
+
+    public void setHinhAnh(String hinhAnh) {
+        this.hinhAnh = hinhAnh;
+    }
+
+    public void setTrangThai(String trangThai) {
+        this.trangThai = trangThai;
+    }
+    
     
 }

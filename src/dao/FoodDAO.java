@@ -123,4 +123,36 @@ public class FoodDAO {
         return null;
     }
     
+    public List<Food> getFoodByName(String foodName) {
+        List<Food> foodList = new ArrayList<>();
+        String sql = "SELECT * FROM foods WHERE food_name LIKE ?";  // Truy vấn tìm kiếm món ăn theo tên
+
+        try (Connection conn = openConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            // Sử dụng '%' để tìm kiếm theo chuỗi con trong tên món ăn
+            stmt.setString(1, "%" + foodName + "%");
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                // Tạo đối tượng Food từ dữ liệu trả về
+                Food food = new Food(
+                        rs.getString("food_id"), // Mã món ăn
+                        rs.getString("food_name"), // Tên món ăn
+                        rs.getDouble("price"), // Giá món ăn
+                        rs.getString("image_path"), // Đường dẫn ảnh món ăn
+                        rs.getString("status") // Trạng thái món ăn
+                );
+
+                // Thêm món ăn vào danh sách
+                foodList.add(food);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return foodList;
+    }
+
+    
 }
