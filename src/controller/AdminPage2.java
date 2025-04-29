@@ -136,6 +136,7 @@ public class AdminPage2 extends javax.swing.JFrame {
         jButton16.setText("jButton16");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
 
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1383,10 +1384,6 @@ public class AdminPage2 extends javax.swing.JFrame {
         if (confirm == JOptionPane.YES_OPTION) {
             // Đóng cửa sổ hiện tại
             this.dispose();
-
-            // Mở lại màn hình đăng nhập
-            AdminPage2 AdminPage = new AdminPage2();
-            AdminPage.setVisible(true);
         }
     }//GEN-LAST:event_jButton11ActionPerformed
 
