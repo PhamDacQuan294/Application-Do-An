@@ -24,7 +24,7 @@ public class AdminPage2 extends javax.swing.JFrame {
 
     public AdminPage2() {
         initComponents();
-//        jTabbedPane1.setUI(null);
+        jTabbedPane1.setUI(null);
 
     }
 
