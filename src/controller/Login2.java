@@ -213,6 +213,12 @@ public class Login2 extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        ForgotPassword forgotForm = new ForgotPassword();
+        forgotForm.setVisible(true);
+        forgotForm.setLocationRelativeTo(null); // Căn giữa màn hình
+
+        // Đóng form hiện tại (nếu cần)
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {
