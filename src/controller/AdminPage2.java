@@ -120,6 +120,20 @@ public class AdminPage2 extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jPasswordField2 = new javax.swing.JPasswordField();
+        jTextField23 = new javax.swing.JTextField();
+        jTextField24 = new javax.swing.JTextField();
+        jTextField25 = new javax.swing.JTextField();
+        jButton26 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -910,6 +924,40 @@ public class AdminPage2 extends javax.swing.JFrame {
         jLabel43.setForeground(new java.awt.Color(153, 153, 153));
         jLabel43.setText("Sửa nhân viên");
 
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel44.setText("Tên nhân viên");
+
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel45.setText("Ngày sinh");
+
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel46.setText("Số điện thoại");
+
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel47.setText("Chức vụ");
+
+        buttonGroup2.add(jRadioButton7);
+        jRadioButton7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jRadioButton7.setText("Quản lý");
+
+        buttonGroup2.add(jRadioButton8);
+        jRadioButton8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jRadioButton8.setText("Nhân viên");
+
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel48.setText("Mã nhân viên");
+
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel49.setText("Mật khẩu");
+
+        jButton26.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton26.setText("Sửa nhân viên");
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -920,9 +968,33 @@ public class AdminPage2 extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(259, 259, 259)
-                        .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(331, Short.MAX_VALUE))
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel49)
+                                    .addComponent(jLabel44)
+                                    .addComponent(jLabel45)
+                                    .addComponent(jLabel46)
+                                    .addComponent(jLabel47))
+                                .addGap(70, 70, 70)
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(51, 51, 51)
+                                        .addComponent(jRadioButton8)))))))
+                .addContainerGap(172, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton26)
+                .addGap(290, 290, 290))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -931,7 +1003,34 @@ public class AdminPage2 extends javax.swing.JFrame {
                 .addComponent(jLabel42)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel43)
-                .addContainerGap(490, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel48)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel49)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel46)
+                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(jRadioButton7)
+                    .addComponent(jRadioButton8))
+                .addGap(32, 32, 32)
+                .addComponent(jButton26)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab8", jPanel11);
@@ -1110,11 +1209,11 @@ public class AdminPage2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "⚠ Lỗi khi tải dữ liệu!", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
-    
+
     private void loadFoodDataToTable() {
         try {
             FoodDAO foodDAO = new FoodDAO();
-            List<Food> foodList = foodDAO.getAllFoods(); 
+            List<Food> foodList = foodDAO.getAllFoods();
 
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 
@@ -1134,8 +1233,8 @@ public class AdminPage2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "⚠ Không thể tải dữ liệu từ database!", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
     }
-    
-    
+
+
     private void jPanel9AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel9AncestorAdded
 
     }//GEN-LAST:event_jPanel9AncestorAdded
@@ -1231,7 +1330,7 @@ public class AdminPage2 extends javax.swing.JFrame {
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         try {
-            String foodId = jTextField6.getText().trim(); 
+            String foodId = jTextField6.getText().trim();
             if (foodId.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Vui lòng nhập ID món ăn để sửa!", "Cảnh báo", JOptionPane.WARNING_MESSAGE);
                 return;
@@ -1245,7 +1344,7 @@ public class AdminPage2 extends javax.swing.JFrame {
                 return;
             }
 
-            double newGiaTien = Double.parseDouble(giaTienText); 
+            double newGiaTien = Double.parseDouble(giaTienText);
 
             String newTrangThai = "";
             for (Enumeration<AbstractButton> buttons = buttonGroup1.getElements(); buttons.hasMoreElements();) {
@@ -1475,15 +1574,16 @@ public class AdminPage2 extends javax.swing.JFrame {
             EmployeeDAO employeeDAO = new EmployeeDAO();
             List<Employee> employeeList = employeeDAO.getAllEmployees();
 
-            DefaultTableModel model = (DefaultTableModel) jTable4.getModel(); // Đổi thành JTable chứa nhân viên
+            DefaultTableModel model = (DefaultTableModel) jTable4.getModel();
 
-            model.setRowCount(0); // Xóa dữ liệu cũ trên bảng
+            model.setRowCount(0); // Xóa dữ liệu cũ
 
             for (Employee emp : employeeList) {
                 String formattedDate = emp.getBirthDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
                 model.addRow(new Object[]{
                     emp.getEmployeeId(),
+                    emp.getPassword(), // Thêm mật khẩu đúng vị trí
                     emp.getRole(),
                     emp.getFullName(),
                     formattedDate,
@@ -1494,9 +1594,10 @@ public class AdminPage2 extends javax.swing.JFrame {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "⚠ Không thể tải dữ liệu nhân viên từ database!", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
+
     }
 
-    
+
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         try {
             // 1️⃣ Lấy dữ liệu từ các trường nhập
@@ -1537,27 +1638,26 @@ public class AdminPage2 extends javax.swing.JFrame {
             EmployeeDAO employeeDAO = new EmployeeDAO();
 
             if (employeeDAO.insertEmployee(employee)) {
-                // 6️⃣ Thêm vào bảng (JTable)
                 DefaultTableModel model = (DefaultTableModel) jTable4.getModel();
                 while (model.getRowCount() > 0 && model.getValueAt(0, 0) == null) {
                     model.removeRow(0);
                 }
 
-                // Chuyển LocalDate về chuỗi theo định dạng dd/MM/yyyy để hiển thị trên bảng
+                // Định dạng ngày sinh để hiển thị
                 String formattedDate = birthDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
-                model.addRow(new Object[]{maNV, role, fullName, formattedDate, soDienThoai});
+                // ✅ Thêm đúng thứ tự các trường
+                model.addRow(new Object[]{maNV, password, role, fullName, formattedDate, soDienThoai});
 
-                // 7️⃣ Hiển thị thông báo
                 JOptionPane.showMessageDialog(this, "Thêm nhân viên thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
 
-                // 8️⃣ Xóa nội dung các trường nhập
+                // Reset form
                 jTextField18.setText("");
                 jPasswordField1.setText("");
                 jTextField20.setText("");
                 jTextField21.setText("");
                 jTextField17.setText("");
-                buttonGroup2.clearSelection(); // Bỏ chọn radio button
+                buttonGroup2.clearSelection();
             } else {
                 JOptionPane.showMessageDialog(this, "Lỗi khi thêm nhân viên!", "Lỗi", JOptionPane.ERROR_MESSAGE);
             }
@@ -1568,75 +1668,8 @@ public class AdminPage2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        int selectedRow = jTable4.getSelectedRow(); // Lấy dòng đang chọn
-        if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Vui lòng chọn một nhân viên để sửa!", "Lỗi", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
 
-        try {
-            // 1️⃣ Lấy dữ liệu từ các trường nhập
-            String maNV = jTextField18.getText();
-            String password = new String(jPasswordField1.getPassword());
-            String fullName = jTextField20.getText();
-            String birthDateStr = jTextField21.getText(); // Định dạng dd/MM/yyyy
-            String soDienThoai = jTextField17.getText();
-
-            // 2️⃣ Lấy vai trò (role) từ buttonGroup2
-            String role = "";
-            for (Enumeration<AbstractButton> buttons = buttonGroup2.getElements(); buttons.hasMoreElements();) {
-                AbstractButton button = buttons.nextElement();
-                if (button.isSelected()) {
-                    role = button.getText();
-                    break;
-                }
-            }
-
-            // 3️⃣ Kiểm tra dữ liệu hợp lệ
-            if (maNV.isEmpty() || password.isEmpty() || fullName.isEmpty() || birthDateStr.isEmpty() || soDienThoai.isEmpty() || role.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin!", "Lỗi", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-
-            // 4️⃣ Chuyển đổi birthDate từ String sang LocalDate
-            LocalDate birthDate;
-            try {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // Định dạng ngày trước, tháng sau, năm cuối
-                birthDate = LocalDate.parse(birthDateStr, formatter);
-            } catch (DateTimeParseException e) {
-                JOptionPane.showMessageDialog(this, "Định dạng ngày sinh không hợp lệ! Vui lòng nhập theo định dạng dd/MM/yyyy", "Lỗi", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-
-            // 5️⃣ Tạo đối tượng Employee và gọi DAO để cập nhật vào database
-            Employee employee = new Employee(maNV, password, role, fullName, birthDate, soDienThoai);
-            EmployeeDAO employeeDAO = new EmployeeDAO();
-
-            if (employeeDAO.updateEmployee(employee)) {
-                // 6️⃣ Cập nhật lại bảng (JTable)
-                DefaultTableModel model = (DefaultTableModel) jTable4.getModel();
-                model.setValueAt(role, selectedRow, 1);
-                model.setValueAt(fullName, selectedRow, 2);
-                model.setValueAt(birthDateStr, selectedRow, 3);
-                model.setValueAt(soDienThoai, selectedRow, 4);
-
-                // 7️⃣ Hiển thị thông báo
-                JOptionPane.showMessageDialog(this, "Cập nhật nhân viên thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-
-                // 8️⃣ Xóa nội dung các trường nhập
-                jTextField18.setText("");
-                jPasswordField1.setText("");
-                jTextField20.setText("");
-                jTextField21.setText("");
-                jTextField17.setText("");
-                buttonGroup2.clearSelection(); // Bỏ chọn radio button
-            } else {
-                JOptionPane.showMessageDialog(this, "Lỗi khi cập nhật nhân viên!", "Lỗi", JOptionPane.ERROR_MESSAGE);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        jTabbedPane1.setSelectedIndex(7);
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -1694,6 +1727,87 @@ public class AdminPage2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton20ActionPerformed
 
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        try {
+            String employeeId = jTextField19.getText().trim();
+            if (employeeId.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập ID nhân viên để sửa!", "Cảnh báo", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+
+            String password = new String(jPasswordField2.getPassword()).trim();
+            String fullName = jTextField23.getText().trim();
+            String birthDateStr = jTextField24.getText().trim();
+            String phoneNumber = jTextField25.getText().trim();
+
+            if (password.isEmpty() || fullName.isEmpty() || birthDateStr.isEmpty() || phoneNumber.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin nhân viên!", "Cảnh báo", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+
+            String role = "";
+            for (Enumeration<AbstractButton> buttons = buttonGroup2.getElements(); buttons.hasMoreElements();) {
+                AbstractButton button = buttons.nextElement();
+                if (button.isSelected()) {
+                    role = button.getText();
+                    break;
+                }
+            }
+
+            if (role.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Vui lòng chọn vai trò cho nhân viên!", "Cảnh báo", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+
+            LocalDate birthDate;
+            try {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                birthDate = LocalDate.parse(birthDateStr, formatter);
+            } catch (DateTimeParseException e) {
+                JOptionPane.showMessageDialog(this, "Định dạng ngày sinh không hợp lệ! Vui lòng nhập theo định dạng dd/MM/yyyy", "Lỗi", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            Employee updatedEmployee = new Employee(employeeId, password, role, fullName, birthDate, phoneNumber);
+
+            EmployeeDAO employeeDAO = new EmployeeDAO();
+
+            boolean updateSuccess = false;
+            try {
+                updateSuccess = employeeDAO.updateEmployee(updatedEmployee);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, "Lỗi khi cập nhật database: " + ex.getMessage(), "Lỗi", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (updateSuccess) {
+                DefaultTableModel model = (DefaultTableModel) jTable4.getModel(); // Sửa tên bảng đúng
+                for (int i = 0; i < model.getRowCount(); i++) {
+                    Object idObj = model.getValueAt(i, 0);
+                    if (idObj != null && idObj.toString().equals(employeeId)) {
+                        model.setValueAt(password, i, 1);
+                        model.setValueAt(role, i, 2);
+                        model.setValueAt(fullName, i, 3);
+                        model.setValueAt(birthDateStr, i, 4);
+                        model.setValueAt(phoneNumber, i, 5);
+                        break;
+                    }
+                }
+
+                JOptionPane.showMessageDialog(this, "Cập nhật nhân viên thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Cập nhật nhân viên thất bại! Vui lòng kiểm tra ID nhân viên.", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "⚠ Đã xảy ra lỗi trong quá trình cập nhật!", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
+
+
+    }//GEN-LAST:event_jButton26ActionPerformed
+
     private void updateImagePanel(String imagePath) {
         ImageIcon icon = new ImageIcon(imagePath);
         Image img = icon.getImage();
@@ -1713,7 +1827,7 @@ public class AdminPage2 extends javax.swing.JFrame {
         jPanel9.revalidate();
         jPanel9.repaint();
     }
-    
+
     private void updateImagePanel2(String imagePath) {
         ImageIcon icon = new ImageIcon(imagePath);
         Image img = icon.getImage();
@@ -1761,6 +1875,7 @@ public class AdminPage2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1795,6 +1910,12 @@ public class AdminPage2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1812,12 +1933,15 @@ public class AdminPage2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1830,10 +1954,14 @@ public class AdminPage2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
