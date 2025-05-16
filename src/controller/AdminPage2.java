@@ -434,6 +434,7 @@ public class AdminPage2 extends javax.swing.JFrame {
         jRadioButton6.setText("Nhân viên");
 
         jButton22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/new product.png"))); // NOI18N
         jButton22.setText("Thêm nhân viên");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -442,6 +443,7 @@ public class AdminPage2 extends javax.swing.JFrame {
         });
 
         jButton23.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/view edit delete product.png"))); // NOI18N
         jButton23.setText("Sửa nhân viên");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -487,7 +489,7 @@ public class AdminPage2 extends javax.swing.JFrame {
                         .addComponent(jButton22)
                         .addGap(101, 101, 101)
                         .addComponent(jButton23)))
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(87, 87, 87)
@@ -526,7 +528,7 @@ public class AdminPage2 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton22)
                     .addComponent(jButton23))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(96, 96, 96)
@@ -642,6 +644,7 @@ public class AdminPage2 extends javax.swing.JFrame {
             }
         });
 
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
         jButton18.setText("Thống kê");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -669,7 +672,7 @@ public class AdminPage2 extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(71, 71, 71)
-                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(149, 149, 149)
@@ -951,6 +954,7 @@ public class AdminPage2 extends javax.swing.JFrame {
         jLabel49.setText("Mật khẩu");
 
         jButton26.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/view edit delete product.png"))); // NOI18N
         jButton26.setText("Sửa nhân viên");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1030,7 +1034,7 @@ public class AdminPage2 extends javax.swing.JFrame {
                     .addComponent(jRadioButton8))
                 .addGap(32, 32, 32)
                 .addComponent(jButton26)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab8", jPanel11);
