@@ -203,7 +203,7 @@ public class Login2 extends javax.swing.JFrame {
         User user = UserDAO.handleLogin(email, password);
 
         if (user != null) {
-            JOptionPane.showMessageDialog(this, "Đăng nhập thành công! Chào mừng " + user.getFullName(), "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Đăng nhập thành công! Chào mừng " , "Thông báo", JOptionPane.INFORMATION_MESSAGE);
             new AdminPage2().setVisible(true);
             this.dispose(); 
         } else {
