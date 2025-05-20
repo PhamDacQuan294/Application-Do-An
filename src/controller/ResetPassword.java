@@ -14,6 +14,7 @@ public class ResetPassword extends javax.swing.JFrame {
     public ResetPassword(String email) {
         this.userEmail = email;
         initComponents();
+        setLocationRelativeTo(null); 
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
