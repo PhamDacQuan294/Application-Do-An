@@ -1485,6 +1485,10 @@ public class AdminPage2 extends javax.swing.JFrame {
                 "Xác nhận đăng xuất", JOptionPane.YES_NO_OPTION);
 
         if (confirm == JOptionPane.YES_OPTION) {
+            // Hiển thị lại form đăng nhập
+            controller.Login2 loginForm = new Login2();
+            loginForm.setVisible(true);
+
             // Đóng cửa sổ hiện tại
             this.dispose();
         }
